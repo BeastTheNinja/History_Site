@@ -1,15 +1,11 @@
 interface CardProps {
-    title: string;
     description: string;
     link?: string;
 }
 
-export const Card = ({ title, description, link }: CardProps) => {
+export const Card = ({ description, link }: CardProps) => {
     return (
-        <article>
-            <h2 className="justify-center  text-2xl font-normal font-['Linden_Hill'] text-amber-200">
-                Year: {title}
-            </h2>
+        <article className="px-15">
             <p className="justify-center  text-2xl font-normal font-['Linden_Hill'] text-neutral-200">
                 {description}
             </p>
