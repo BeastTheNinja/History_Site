@@ -5,8 +5,8 @@ interface CardProps {
 
 export const Card = ({ description, link }: CardProps) => {
     return (
-        <article className="px-15">
-            <p className="justify-center  text-2xl font-normal font-['Linden_Hill'] text-neutral-200">
+        <article className="px-4 md:px-12">
+            <p className="text-lg font-normal font-['Linden_Hill'] text-neutral-200 md:text-2xl">
                 {description}
             </p>
             {link && (
@@ -14,7 +14,7 @@ export const Card = ({ description, link }: CardProps) => {
                     href={link}
                     target="_blank"
                     rel="noreferrer"
-                    className="justify-center  text-2xl font-normal font-['Linden_Hill'] underline tracking-[0.2em] text-amber-200 hover:text-amber-100"
+                    className="mt-3 inline-block text-sm font-normal font-['Linden_Hill'] uppercase tracking-[0.2em] text-amber-200 hover:text-amber-100 md:text-lg"
                 >
                     Read more
                 </a>

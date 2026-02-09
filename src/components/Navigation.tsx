@@ -14,14 +14,14 @@ export const Navigation = () => {
     return (
 
         <>
-            <nav className="border-b-20 border-[#1F1F1F] ">
-                <ul className="flex gap-50 justify-center">
+            <nav className="border-b-20 border-[#1F1F1F]">
+                <ul className="flex flex-col justify-center items-center gap-4 py-4 md:flex-row md:gap-12 md:py-0">
                     {Links.map((link) => {
                         return (
-                            <li className="pt-5" key={link.link}>
+                            <li className="pt-2 md:pt-5" key={link.link}>
                                 <NavLink
                                     to={link.link}
-                                    className={`flex my-5 text-2xl text-white`}
+                                    className="flex text-lg text-white md:my-5 md:text-2xl"
                                     end={link.link === "/"}>
                                     {link.name}
                                 </NavLink>
