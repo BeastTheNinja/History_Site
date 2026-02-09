@@ -8,7 +8,7 @@ export const Layout = () => {
     return (
 
         <>
-            <div className="bg-[#151515] max-w-screen max-h-screen mx-auto ">
+            <div className="bg-[#151515]">
         <Header />
 
         <Navigation />

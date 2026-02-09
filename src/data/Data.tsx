@@ -4,8 +4,7 @@ export const useFetchData = <T,>(url: string) => {
 
     const [data, setData] = useState<T>();
     const [loading, setLoading] = useState(true);
-    const [error, setError] = useState<string | null>();
-
+    const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -18,10 +17,10 @@ export const useFetchData = <T,>(url: string) => {
             } catch (error) {
                 setError("An error occurred while fetching data.");
                 console.error("Error fetching data:", error);
-            } 
+            }
         }
         fetchData();
     }, [url])
 
     return { data, loading, error };
-}
+}  

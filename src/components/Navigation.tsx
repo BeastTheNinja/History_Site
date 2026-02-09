@@ -4,8 +4,8 @@ import { NavLink } from "react-router"
 export const Navigation = () => {
 
     const Links = [
+        { name: 'By Date', link: '/by-date' }, 
         { name: 'Today', link: '/' },
-        { name: 'By Date', link: '/by-date' },
         { name: 'Since', link: '/since' },
     ]
 
@@ -21,6 +21,7 @@ export const Navigation = () => {
                             <li className="pt-5" key={link.link}>
                                 <NavLink
                                     to={link.link}
+                                    className={`flex my-5 text-2xl text-white`}
                                     end={link.link === "/"}>
                                     {link.name}
                                 </NavLink>
