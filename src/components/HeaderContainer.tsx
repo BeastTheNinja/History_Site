@@ -63,7 +63,7 @@ export const HeaderContainer = () => {
                             onChange={handleYearChange}
                             headingText="SINCE:"
                             descriptionText="What happend on this day - Here you can enter a specific year to get only events for that year"
-                            inputPlaceholder="YYYY"
+                            inputPlaceholder="Year"
                             inputPattern="^\\d{4}$"
                             inputMode="numeric"
                             formatValue={(raw) => raw.replace(/\D/g, "").slice(0, 4)}
