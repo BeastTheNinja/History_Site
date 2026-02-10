@@ -11,6 +11,7 @@ type DateInputProps = {
     inputMode?: "numeric" | "text" | "decimal" | "tel" | "search" | "email" | "url";
     formatValue?: (raw: string) => string;
     isValidValue?: (value: string) => boolean;
+    layout?: "flow" | "absolute";
 };
 
 export const DateInput = ({
@@ -24,6 +25,7 @@ export const DateInput = ({
     inputMode = "numeric",
     formatValue,
     isValidValue,
+    layout = "absolute",
 }: DateInputProps) => {
     const formatDDMM = (raw: string) => {
         const digits = raw.replace(/\D/g, "").slice(0, 4);
@@ -47,9 +49,17 @@ export const DateInput = ({
         }
     };
 
+    const isFlow = layout === "flow"
+    const inputWrapperClass = isFlow
+        ? "flex flex-wrap items-baseline justify-center gap-3 md:flex-nowrap md:items-center"
+        : "flex flex-wrap items-baseline justify-center gap-3 md:absolute md:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-25 md:gap-4"
+    const descriptionClass = isFlow
+        ? "text-base sm:text-xl md:text-3xl font-normal text-[#695E48] dark:text-[#C7BD8D] font-['Linden_Hill'] max-w-[90%] sm:max-w-[70%] text-center px-4"
+        : "text-base sm:text-xl md:text-3xl font-normal text-[#695E48] dark:text-[#C7BD8D] font-['Linden_Hill'] max-w-[90%] sm:max-w-[70%] text-center px-4 md:absolute md:top-3/4 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2"
+
     return (
         <>
-            <div className="absolute top-1/2 left-1/2 flex items-baseline gap-3 transform -translate-x-1/2 -translate-y-25 sm:gap-4">
+            <div className={inputWrapperClass}>
                 <h1 className="text-4xl sm:text-6xl md:text-8xl text-[#1F1F1F] dark:text-[#C7BD8D] font-normal font-['Limelight']">{headingText}</h1>
                 <input
                     type="text"
@@ -58,10 +68,10 @@ export const DateInput = ({
                     pattern={inputPattern}
                     value={value}
                     onChange={(e) => handleChange(e.target.value)}
-                    className="w-full text-4xl sm:text-6xl md:text-8xl font-normal font-['Limelight'] underline text-[#1F1F1F] dark:text-[#C7BD8D] bg-transparent border-none focus:outline-none placeholder:text-[#695E48] dark:placeholder:text-[#C7BD8D]/70"
+                    className={`w-32 sm:w-40 ${isFlow ? "md:w-48" : "md:w-full"} text-4xl sm:text-6xl md:text-8xl font-normal font-['Limelight'] underline text-[#1F1F1F] dark:text-[#C7BD8D] bg-transparent border-none focus:outline-none placeholder:text-[#695E48] dark:placeholder:text-[#C7BD8D]/70`}
                 />
             </div>
-            <p className="absolute top-3/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-base sm:text-xl md:text-3xl font-normal text-[#695E48] dark:text-[#C7BD8D] font-['Linden_Hill'] max-w-[90%] sm:max-w-[70%] text-center px-4">
+            <p className={descriptionClass}>
                 {descriptionText}
             </p>
         </>

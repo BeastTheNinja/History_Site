@@ -9,7 +9,7 @@ interface TimelineProps {
 export const Timeline = ({ items }: TimelineProps) => {
     return (
         <section className="relative mx-auto max-w-5xl px-4 py-13">
-            <div className="absolute left-1/2 top-0 h-full w-1 -translate-x-1/2 bg-[#D29E62]/30 dark:bg-[#C7BD8D]/40 md:w-3" />
+            <div className="absolute left-4 top-0 h-full w-1 bg-[#D29E62]/30 dark:bg-[#C7BD8D]/40 md:left-1/2 md:-translate-x-1/2 md:w-3" />
 
             <div className="space-y-20">
                 {items.map((item, index) => {
@@ -17,8 +17,8 @@ export const Timeline = ({ items }: TimelineProps) => {
                     const isLeft = index % 2 === 0
                     const link = item.links?.[0]?.link
                     const cardColumnClass = isLeft
-                        ? "w-1/2 pr-8 md:w-1/2 md:pr-24 md:pt-12"
-                        : "w-1/2 pr-8 md:w-1/2 md:pl-24 md:ml-auto md:pt-12"
+                        ? "w-full pl-8 md:w-1/2 md:pl-0 md:pr-24 md:pt-12"
+                        : "w-full pl-8 md:w-1/2 md:pl-24 md:ml-auto md:pt-12"
 
                     return (
                         <div
@@ -37,7 +37,7 @@ export const Timeline = ({ items }: TimelineProps) => {
                                 </CardContainer>
                             </div>
 
-                            <span className="absolute left-1/2 top-6 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#D29E62] bg-[#F5F5F5] dark:border-[#C7BD8D] dark:bg-[#151515] md:top-1/2" />
+                            <span className="absolute left-4 top-6 h-4 w-4 -translate-y-1/2 rounded-full border border-[#D29E62] bg-[#F5F5F5] dark:border-[#C7BD8D] dark:bg-[#151515] md:left-1/2 md:top-1/2 md:-translate-x-1/2" />
                             <span
                                 className={`absolute top-1/2 hidden -translate-y-full -mt-2 text-2xl font-normal font-['Linden_Hill'] text-[#695E48] dark:text-[#C7BD8D] md:block ${isLeft ? "right-1/2 pr-4 text-right" : "left-1/2 pl-4 text-left"
                                     }`}
@@ -45,7 +45,7 @@ export const Timeline = ({ items }: TimelineProps) => {
                                 Year: {item.year}
                             </span>
                             <span
-                                className={`absolute top-6 h-px -translate-y-1/2 bg-[#D29E62]/50 dark:bg-[#C7BD8D]/60 right-1/2 w-10 md:top-1/2 md:w-[12%] ${isLeft ? "md:right-1/2 md:left-auto" : "md:left-1/2 md:right-auto"
+                                className={`absolute top-1/2 hidden h-px -translate-y-1/2 bg-[#D29E62]/50 dark:bg-[#C7BD8D]/60 md:block md:w-[12%] ${isLeft ? "md:right-1/2 md:left-auto" : "md:left-1/2 md:right-auto"
                                     }`}
                             />
                         </div>

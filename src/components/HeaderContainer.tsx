@@ -39,15 +39,15 @@ export const HeaderContainer = () => {
     return (
         <>
             <div
-                className={`absolute left-1/2 top-1/4 sm:top-1/3 -translate-x-1/2 ${isWideHeader
+                className={`relative mx-auto mt-4 px-4 md:absolute md:left-1/2 md:top-1/4 md:-translate-x-1/2 md:mt-0 md:px-0 ${isWideHeader
                     ? "w-[calc(100vw-2rem)] max-w-288.5"
-                    : ""
+                    : "w-full max-w-88 sm:max-w-120 md:max-w-166.25"
                     }`}
             >
                 <div
-                    className={`relative items-center bg-[#FFE9BF] dark:bg-[#1F1F1F] border-12 sm:border-18 md:border-25 border-[#D29E62] dark:border-[#D29E62] ${isWideHeader
-                        ? "w-full h-113"
-                        : "w-88 h-72 sm:w-120 sm:h-88 md:w-166.25 md:h-96"
+                    className={`relative flex flex-col items-center justify-center gap-4 bg-[#FFE9BF] dark:bg-[#1F1F1F] border-12 sm:border-18 md:border-25 border-[#D29E62] dark:border-[#D29E62] px-4 py-8 md:px-0 md:py-0 ${isWideHeader
+                        ? "w-full h-113 md:gap-6"
+                        : "w-full h-72 sm:h-88 md:h-96 md:block"
                         }`}
                 >
                     {!isByDate && !isSince && <HeaderText />}
@@ -55,6 +55,7 @@ export const HeaderContainer = () => {
                         <DateInput
                             value={dateValue}
                             onChange={handleDateChange}
+                            layout={isWideHeader ? "flow" : "absolute"}
                         />
                     )}
                     {isSince && (
@@ -68,6 +69,7 @@ export const HeaderContainer = () => {
                             inputMode="numeric"
                             formatValue={(raw) => raw.replace(/\D/g, "").slice(0, 4)}
                             isValidValue={(value) => /^\d{4}$/.test(value)}
+                            layout={isWideHeader ? "flow" : "absolute"}
                         />
                     )}
                     <div className="absolute top-1 left-1 sm:top-2 sm:left-2 w-4 h-4 sm:w-5 sm:h-5 md:w-7 md:h-7 bg-[#D29E62] dark:bg-[#C7BD8D] rounded-full"></div>
