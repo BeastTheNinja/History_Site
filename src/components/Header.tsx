@@ -2,7 +2,7 @@ import Hero from '../assets/img/mr-cup-fabien-barral-Fo5dTm6ID1Y-unsplash.jpg'
 import { HeaderContainer } from './HeaderContainer'
 
 export const Header = () => {
-
+    // Hero image and corner accents.
     return (
         <>
         <div className="relative">

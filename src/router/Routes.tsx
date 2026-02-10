@@ -5,9 +5,7 @@ import { ByDateView } from "../pages/ByDateView"
 import { SinceView } from "../pages/SinceView"
 
 export const Routing = () => {
-
-
-
+    // Top-level routes share the same layout.
     return (
 
         <>

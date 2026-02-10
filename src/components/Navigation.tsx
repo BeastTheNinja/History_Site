@@ -3,6 +3,7 @@ import { NavLink } from "react-router"
 
 export const Navigation = () => {
 
+    // Primary navigation links.
     const Links = [
         { name: 'By Date', link: '/by-date' }, 
         { name: 'Today', link: '/' },

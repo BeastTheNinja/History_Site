@@ -13,6 +13,7 @@ export const SinceView = () => {
 		"https://history.muffinlabs.com/date"
 	)
 
+	// Filter events only when a valid year is provided; otherwise show all.
 	const filteredItems = data
 		? hasValidYear
 			? data.data.Events.filter((item) => Number(item.year) >= yearNumber)

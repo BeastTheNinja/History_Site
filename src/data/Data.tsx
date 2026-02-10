@@ -7,6 +7,7 @@ export const useFetchData = <T,>(url: string) => {
     const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
+        // Fetch whenever the URL changes.
         const fetchData = async () => {
 
             try {

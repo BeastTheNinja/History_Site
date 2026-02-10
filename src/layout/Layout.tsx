@@ -4,7 +4,7 @@ import { Navigation } from "../components/Navigation"
 
 export const Layout = () => {
 
-
+    // Shared page shell with header, nav, and route outlet.
     return (
 
         <>

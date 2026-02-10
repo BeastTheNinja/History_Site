@@ -13,6 +13,7 @@ export const Timeline = ({ items }: TimelineProps) => {
 
             <div className="space-y-20">
                 {items.map((item, index) => {
+                    // Alternate cards left/right down the timeline.
                     const isLeft = index % 2 === 0
                     const link = item.links?.[0]?.link
                     const cardColumnClass = isLeft

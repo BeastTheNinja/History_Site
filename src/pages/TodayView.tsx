@@ -5,7 +5,7 @@ import type { HistoryData } from "../types/Data"
 
 
 export const TodayView = () => {
-
+    // Default view shows today's events from the API.
     const { data, loading, error } = useFetchData<HistoryData>("https://history.muffinlabs.com/date")
 
     console.log(data)

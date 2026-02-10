@@ -4,6 +4,7 @@ interface CardProps {
 }
 
 export const Card = ({ description, link }: CardProps) => {
+    // Optional source link rendered when provided.
     return (
         <article className="px-4 md:px-12">
             <p className="text-lg font-normal font-['Linden_Hill'] text-neutral-200 md:text-2xl">

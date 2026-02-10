@@ -9,9 +9,11 @@ export const HeaderContainer = () => {
     const isSince = location.pathname === "/since"
     const isWideHeader = isByDate || isSince
 
+    // Read current input values from the URL query string.
     const dateValue = new URLSearchParams(location.search).get("date") ?? ""
     const yearValue = new URLSearchParams(location.search).get("year") ?? ""
 
+    // Keep the URL in sync with typed values on each view.
     const handleDateChange = (next: string) => {
         if (!isByDate) return
 

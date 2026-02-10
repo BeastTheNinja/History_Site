@@ -6,6 +6,7 @@ interface CardContainerProps {
 }
 
 export const CardContainer = ({ align, children }: CardContainerProps) => {
+    // Shift cards to align with the timeline side.
     const alignmentClass = align === "left" ? "md:justify-end" : "md:justify-start"
 
     return (

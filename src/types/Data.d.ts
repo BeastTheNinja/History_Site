@@ -1,3 +1,4 @@
+// API response shape from history.muffinlabs.com.
 export interface HistoryData {
     date: string;
     url:  string;

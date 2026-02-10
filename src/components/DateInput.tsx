@@ -34,6 +34,7 @@ export const DateInput = ({
     const isValidDDMM = (v: string) =>
         /^(0[1-9]|[12][0-9]|3[01])-(0[1-9]|1[0-2])$/.test(v);
 
+    // Apply the optional formatter/validator or fallback to DD-MM behavior.
     const handleChange = (raw: string) => {
         const formatter = formatValue ?? formatDDMM;
         const validator = isValidValue ?? isValidDDMM;
