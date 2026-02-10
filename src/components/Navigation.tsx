@@ -21,7 +21,7 @@ export const Navigation = () => {
                             <li className="pt-2 md:pt-5" key={link.link}>
                                 <NavLink
                                     to={link.link}
-                                    className="flex text-lg text-white md:my-5 md:text-2xl"
+                                    className="flex text-lg text-[#FFE9BF] md:my-5 md:text-2xl"
                                     end={link.link === "/"}>
                                     {link.name}
                                 </NavLink>
