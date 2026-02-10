@@ -9,7 +9,9 @@ interface TimelineProps {
 export const Timeline = ({ items }: TimelineProps) => {
     return (
         <section className="relative mx-auto max-w-5xl px-4 py-13">
-            <div className="absolute left-4 top-0 h-full w-1 bg-[#D29E62]/30 dark:bg-[#C7BD8D]/40 md:left-1/2 md:-translate-x-1/2 md:w-3" />
+            <div className="absolute left-4 top-0 h-16 w-16 -translate-y-1/2 rounded-full bg-[#C7BD8D] md:left-1/2 md:-translate-x-1/2" />
+
+            <div className="absolute left-4 top-0 h-full w-1 bg-[#D29E62]/30 dark:bg-[#C7BD8D]/40 md:left-1/2 md:-translate-x-1/2 md:w-2" />
 
             <div className="space-y-20">
                 {items.map((item, index) => {
