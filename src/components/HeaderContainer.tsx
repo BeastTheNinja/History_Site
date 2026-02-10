@@ -45,7 +45,7 @@ export const HeaderContainer = () => {
                     }`}
             >
                 <div
-                    className={`relative items-center bg-[#F7F1E4] dark:bg-[#1F1F1F] border-12 sm:border-18 md:border-25 border-[#B9955B] dark:border-[#D29E62] ${isWideHeader
+                    className={`relative items-center bg-[#FFE9BF] dark:bg-[#1F1F1F] border-12 sm:border-18 md:border-25 border-[#D29E62] dark:border-[#D29E62] ${isWideHeader
                         ? "w-full h-113"
                         : "w-88 h-72 sm:w-120 sm:h-88 md:w-166.25 md:h-96"
                         }`}
@@ -70,10 +70,10 @@ export const HeaderContainer = () => {
                             isValidValue={(value) => /^\d{4}$/.test(value)}
                         />
                     )}
-                    <div className="absolute top-1 left-1 sm:top-2 sm:left-2 w-4 h-4 sm:w-5 sm:h-5 md:w-7 md:h-7 bg-[#B9955B] dark:bg-[#C7BD8D] rounded-full"></div>
-                    <div className="absolute top-1 right-1 sm:top-2 sm:right-2 w-4 h-4 sm:w-5 sm:h-5 md:w-7 md:h-7 bg-[#B9955B] dark:bg-[#C7BD8D] rounded-full"></div>
-                    <div className="absolute bottom-1 left-1 sm:bottom-2 sm:left-2 w-4 h-4 sm:w-5 sm:h-5 md:w-7 md:h-7 bg-[#B9955B] dark:bg-[#C7BD8D] rounded-full"></div>
-                    <div className="absolute bottom-1 right-1 sm:bottom-2 sm:right-2 w-4 h-4 sm:w-5 sm:h-5 md:w-7 md:h-7 bg-[#B9955B] dark:bg-[#C7BD8D] rounded-full"></div>
+                    <div className="absolute top-1 left-1 sm:top-2 sm:left-2 w-4 h-4 sm:w-5 sm:h-5 md:w-7 md:h-7 bg-[#D29E62] dark:bg-[#C7BD8D] rounded-full"></div>
+                    <div className="absolute top-1 right-1 sm:top-2 sm:right-2 w-4 h-4 sm:w-5 sm:h-5 md:w-7 md:h-7 bg-[#D29E62] dark:bg-[#C7BD8D] rounded-full"></div>
+                    <div className="absolute bottom-1 left-1 sm:bottom-2 sm:left-2 w-4 h-4 sm:w-5 sm:h-5 md:w-7 md:h-7 bg-[#D29E62] dark:bg-[#C7BD8D] rounded-full"></div>
+                    <div className="absolute bottom-1 right-1 sm:bottom-2 sm:right-2 w-4 h-4 sm:w-5 sm:h-5 md:w-7 md:h-7 bg-[#D29E62] dark:bg-[#C7BD8D] rounded-full"></div>
                 </div>
             </div>
         </>

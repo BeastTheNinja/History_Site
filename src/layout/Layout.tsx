@@ -14,7 +14,7 @@ export const Layout = () => {
     return (
 
         <>
-            <div className={`min-h-screen overflow-x-hidden bg-[#F5F1E8] text-[#3B2A22] dark:bg-[#151515] dark:text-[#EDE6D8] ${isDarkMode ? "dark" : ""}`}>
+            <div className={`min-h-screen overflow-x-hidden bg-[#F5F5F5] text-[#695E48] dark:bg-[#151515] dark:text-[#F5F5F5] ${isDarkMode ? "dark" : ""}`}>
                 <Header />
 
                 <Navigation />

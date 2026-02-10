@@ -15,7 +15,7 @@ export const Navigation = () => {
     return (
 
         <>
-            <nav className="border-b-20 border-[#E6D9C4] dark:border-[#1F1F1F]">
+            <nav className="border-b-20 border-[#FFE9BF] dark:border-[#1F1F1F]">
                 <ul className="flex flex-col justify-center items-center gap-4 py-4 md:flex-row md:gap-12 md:py-0">
                     {Links.map((link) => {
                         return (
@@ -25,8 +25,8 @@ export const Navigation = () => {
                                     className={({ isActive }) =>
                                         `flex text-lg md:my-5 md:text-2xl ${
                                             isActive
-                                                ? "text-[#695E48] underline underline-offset-8 dark:text-[#FFE9BF]"
-                                                : "text-[#3B2A22] hover:text-[#695E48] dark:text-[#C7BD8D] dark:hover:text-[#FFE9BF]"
+                                                ? "text-[#1F1F1F] underline underline-offset-8 dark:text-[#FFE9BF]"
+                                                : "text-[#695E48] hover:text-[#D29E62] dark:text-[#C7BD8D] dark:hover:text-[#D29E62]"
                                         }`
                                     }
                                     end={link.link === "/"}>

@@ -8,7 +8,11 @@ export const DarkModeProvider = ({ children }: { children: ReactNode }) => {
 
     // Toggle between light and dark mode
     const toggleDarkMode = () => {
-        setIsDarkMode(prev => !prev)
+        setIsDarkMode(prev => {
+            const next = !prev
+            document.documentElement.classList.toggle("dark", next)
+            return next
+        })
     }
 
     return (

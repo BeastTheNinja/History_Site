@@ -17,7 +17,7 @@ export const DarkmodeToggle = () => {
         <>
         <button
             onClick={toggleDarkMode}
-            className="text-[18px] font-normal font-inter uppercase text-[#3B2A22] hover:text-[#B85A39] dark:text-[#EDE6D8] dark:hover:text-[#B85A39] dark:hover:bg-[#2A2A2A] rounded transition-colors">
+            className="text-[18px] font-normal font-inter uppercase text-[#695E48] hover:text-[#D29E62] dark:text-[#F5F5F5] dark:hover:text-[#D29E62] dark:hover:bg-[#1F1F1F] rounded transition-colors">
             {isDarkMode ? "Light Mode" : "Dark Mode"}
         </button>
 

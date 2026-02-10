@@ -9,7 +9,7 @@ interface TimelineProps {
 export const Timeline = ({ items }: TimelineProps) => {
     return (
         <section className="relative mx-auto max-w-5xl px-4 py-13">
-            <div className="absolute left-1/2 top-0 h-full w-1 -translate-x-1/2 bg-amber-700/30 dark:bg-amber-200/40 md:w-3" />
+            <div className="absolute left-1/2 top-0 h-full w-1 -translate-x-1/2 bg-[#D29E62]/30 dark:bg-[#C7BD8D]/40 md:w-3" />
 
             <div className="space-y-20">
                 {items.map((item, index) => {
@@ -26,7 +26,7 @@ export const Timeline = ({ items }: TimelineProps) => {
                             className="relative md:flex md:items-center"
                         >
                             <div className={cardColumnClass}>
-                                <div className="mb-3 text-2xl font-normal font-['Linden_Hill'] text-amber-800 dark:text-amber-200 md:hidden">
+                                <div className="mb-3 text-2xl font-normal font-['Linden_Hill'] text-[#695E48] dark:text-[#C7BD8D] md:hidden">
                                     Year: {item.year}
                                 </div>
                                 <CardContainer align={isLeft ? "left" : "right"}>
@@ -37,15 +37,15 @@ export const Timeline = ({ items }: TimelineProps) => {
                                 </CardContainer>
                             </div>
 
-                            <span className="absolute left-1/2 top-6 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full border border-amber-700 bg-[#F5F1E8] dark:border-amber-200 dark:bg-neutral-900 md:top-1/2" />
+                            <span className="absolute left-1/2 top-6 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#D29E62] bg-[#F5F5F5] dark:border-[#C7BD8D] dark:bg-[#151515] md:top-1/2" />
                             <span
-                                className={`absolute top-1/2 hidden -translate-y-full -mt-2 text-2xl font-normal font-['Linden_Hill'] text-amber-800 dark:text-amber-200 md:block ${isLeft ? "right-1/2 pr-4 text-right" : "left-1/2 pl-4 text-left"
+                                className={`absolute top-1/2 hidden -translate-y-full -mt-2 text-2xl font-normal font-['Linden_Hill'] text-[#695E48] dark:text-[#C7BD8D] md:block ${isLeft ? "right-1/2 pr-4 text-right" : "left-1/2 pl-4 text-left"
                                     }`}
                             >
                                 Year: {item.year}
                             </span>
                             <span
-                                className={`absolute top-6 h-px -translate-y-1/2 bg-amber-700/50 dark:bg-amber-200/60 right-1/2 w-10 md:top-1/2 md:w-[12%] ${isLeft ? "md:right-1/2 md:left-auto" : "md:left-1/2 md:right-auto"
+                                className={`absolute top-6 h-px -translate-y-1/2 bg-[#D29E62]/50 dark:bg-[#C7BD8D]/60 right-1/2 w-10 md:top-1/2 md:w-[12%] ${isLeft ? "md:right-1/2 md:left-auto" : "md:left-1/2 md:right-auto"
                                     }`}
                             />
                         </div>
