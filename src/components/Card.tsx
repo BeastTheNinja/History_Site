@@ -1,3 +1,5 @@
+import { LiaBookOpenSolid } from "react-icons/lia";
+
 interface CardProps {
     description: string;
     link?: string;
@@ -17,7 +19,7 @@ export const Card = ({ description, link }: CardProps) => {
                     rel="noreferrer"
                     className="mt-3 inline-block text-sm font-normal font-['Linden_Hill'] uppercase tracking-[0.2em] text-[#D29E62] hover:text-[#1F1F1F] dark:text-[#FFE9BF] dark:hover:text-[#D29E62] md:text-lg"
                 >
-                    Read more
+                    Read more<LiaBookOpenSolid className="inline-block ml-2" />
                 </a>
             )}
         </article>
