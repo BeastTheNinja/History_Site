@@ -8,16 +8,16 @@ export const Layout = () => {
     return (
 
         <>
-            <div className="bg-[#151515]">
-        <Header />
+            <div className="bg-[#151515] overflow-x-hidden">
+                <Header />
 
-        <Navigation />
+                <Navigation />
 
-        <Outlet />
-        </div>
+                <Outlet />
+            </div>
 
-        
-        
+
+
         </>
     )
 }

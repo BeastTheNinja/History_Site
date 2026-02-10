@@ -22,11 +22,16 @@ export const HeaderContainer = () => {
 
     return (
         <>
-            <div className="absolute left-1/2 top-1/4 sm:top-1/3 -translate-x-1/2">
+            <div
+                className={`absolute left-1/2 top-1/4 sm:top-1/3 -translate-x-1/2 ${isByDate
+                    ? "w-[calc(100vw-2rem)] max-w-288.5"
+                    : ""
+                    }`}
+            >
                 <div
                     className={`relative items-center bg-[#1F1F1F] border-12 sm:border-18 md:border-25 border-[#D29E62] ${isByDate
-                            ? "w-288.5 h-113"
-                            : "w-88 h-72 sm:w-120 sm:h-88 md:w-166.25 md:h-96"
+                        ? "w-full h-113"
+                        : "w-88 h-72 sm:w-120 sm:h-88 md:w-166.25 md:h-96"
                         }`}
                 >
                     {!isByDate && <HeaderText />}

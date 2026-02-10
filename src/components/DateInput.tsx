@@ -28,17 +28,21 @@ export const DateInput = ({ value, onChange, onValidDate }: DateInputProps) => {
 
     return (
         <>
-            <h1 className="absolute top-1/2 left-1/2 transform -translate-x-70 -translate-y-22 text-8xl text-[#C7BD8D] font-normal font-['Limelight']" >ON:
-            </h1><input
-                type="text"
-                inputMode="numeric"
-                placeholder="DD-MM"
-                pattern="^(0[1-9]|[12][0-9]|3[01])-(0[1-9]|1[0-2])$"
-                value={value}
-                onChange={(e) => handleChange(e.target.value)}
-                className="absolute top-1/2 left-1/2 transform -translate-x-20 -translate-y-25 text-8xl font-normal font-['Limelight'] underline text-[#C7BD8D] "
-            />
-            <p className="absolute top-3/4 left-1/2 transform -translate-x-60 -translate-y-1/2 text-3xl font-normal text-[#C7BD8D] font-['Linden_Hill']">What happened on this day - Here you can enter a specific date to get only events that happened on this date</p>
+            <div className="absolute top-1/2 left-1/2 flex items-baseline gap-3 transform -translate-x-1/2 -translate-y-25 sm:gap-4">
+                <h1 className="text-4xl sm:text-6xl md:text-8xl text-[#C7BD8D] font-normal font-['Limelight']">ON:</h1>
+                <input
+                    type="text"
+                    inputMode="numeric"
+                    placeholder="DD-MM"
+                    pattern="^(0[1-9]|[12][0-9]|3[01])-(0[1-9]|1[0-2])$"
+                    value={value}
+                    onChange={(e) => handleChange(e.target.value)}
+                    className="w-full text-4xl sm:text-6xl md:text-8xl font-normal font-['Limelight'] underline text-[#C7BD8D] bg-transparent border-none focus:outline-none"
+                />
+            </div>
+            <p className="absolute top-3/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-base sm:text-xl md:text-3xl font-normal text-[#C7BD8D] font-['Linden_Hill'] max-w-[90%] sm:max-w-[70%] text-center px-4">
+                What happened on this day - Here you can enter a specific date to get only events that happened on this date
+            </p>
         </>
     )
 }
