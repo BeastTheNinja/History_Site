@@ -50,7 +50,7 @@ export const DateInput = ({
     return (
         <>
             <div className="absolute top-1/2 left-1/2 flex items-baseline gap-3 transform -translate-x-1/2 -translate-y-25 sm:gap-4">
-                <h1 className="text-4xl sm:text-6xl md:text-8xl text-[#C7BD8D] font-normal font-['Limelight']">{headingText}</h1>
+                <h1 className="text-4xl sm:text-6xl md:text-8xl text-[#3B2A22] dark:text-[#C7BD8D] font-normal font-['Limelight']">{headingText}</h1>
                 <input
                     type="text"
                     inputMode={inputMode}
@@ -58,10 +58,10 @@ export const DateInput = ({
                     pattern={inputPattern}
                     value={value}
                     onChange={(e) => handleChange(e.target.value)}
-                    className="w-full text-4xl sm:text-6xl md:text-8xl font-normal font-['Limelight'] underline text-[#C7BD8D] bg-transparent border-none focus:outline-none"
+                    className="w-full text-4xl sm:text-6xl md:text-8xl font-normal font-['Limelight'] underline text-[#3B2A22] dark:text-[#C7BD8D] bg-transparent border-none focus:outline-none placeholder:text-[#7A6A5A] dark:placeholder:text-[#C7BD8D]/70"
                 />
             </div>
-            <p className="absolute top-3/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-base sm:text-xl md:text-3xl font-normal text-[#C7BD8D] font-['Linden_Hill'] max-w-[90%] sm:max-w-[70%] text-center px-4">
+            <p className="absolute top-3/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-base sm:text-xl md:text-3xl font-normal text-[#3B2A22] dark:text-[#C7BD8D] font-['Linden_Hill'] max-w-[90%] sm:max-w-[70%] text-center px-4">
                 {descriptionText}
             </p>
         </>
