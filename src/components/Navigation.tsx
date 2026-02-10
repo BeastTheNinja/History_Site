@@ -5,7 +5,7 @@ export const Navigation = () => {
 
     // Primary navigation links.
     const Links = [
-        { name: 'By Date', link: '/by-date' }, 
+        { name: 'By Date', link: '/by-date' },
         { name: 'Today', link: '/' },
         { name: 'Since', link: '/since' },
     ]
@@ -23,10 +23,9 @@ export const Navigation = () => {
                                 <NavLink
                                     to={link.link}
                                     className={({ isActive }) =>
-                                        `flex text-lg md:my-5 md:text-2xl ${
-                                            isActive
-                                                ? "text-[#1F1F1F] underline underline-offset-8 dark:text-[#FFE9BF]"
-                                                : "text-[#695E48] hover:text-[#D29E62] dark:text-[#C7BD8D] dark:hover:text-[#D29E62]"
+                                        `flex text-2xl sm:text-3xl md:text-4xl font-normal font-['Linden_Hill'] md:my-5 ${isActive
+                                            ? "text-[#1F1F1F] underline underline-offset-8 dark:text-[#FFE9BF]"
+                                            : "text-[#695E48] hover:text-[#D29E62] dark:text-[#C7BD8D] dark:hover:text-[#D29E62]"
                                         }`
                                     }
                                     end={link.link === "/"}>

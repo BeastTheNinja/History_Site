@@ -18,8 +18,8 @@ export const ByDateView = () => {
     return (
         <>
             <div>
-                {loading && <p>loading</p>}
-                {error && <p>error</p>}
+                {loading && <p className="font-['Linden_Hill'] text-[#695E48] dark:text-[#C7BD8D]">loading</p>}
+                {error && <p className="font-['Linden_Hill'] text-[#695E48] dark:text-[#C7BD8D]">error</p>}
                 {data && <Timeline items={data.data.Events} />}
             </div>
         </>

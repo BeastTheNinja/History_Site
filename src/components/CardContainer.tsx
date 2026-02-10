@@ -11,7 +11,7 @@ export const CardContainer = ({ align, children }: CardContainerProps) => {
 
     return (
         <div className={`flex w-full ${alignmentClass}`}>
-            <div className="w-full max-w-sm md:max-w-md">
+            <div className="w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl">
                 {children}
             </div>
         </div>
