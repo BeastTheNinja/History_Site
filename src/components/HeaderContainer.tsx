@@ -39,7 +39,7 @@ export const HeaderContainer = () => {
     return (
         <>
             <div
-                className={`relative mx-auto mt-4 px-4 md:absolute md:left-1/2 md:top-1/4 md:-translate-x-1/2 md:mt-0 md:px-0 ${isWideHeader
+                className={`relative mx-auto mt-4 px-4 md:absolute md:left-1/2 md:top-120 md:-translate-x-1/2 md:mt-0 md:px-0 ${isWideHeader
                     ? "w-[calc(100vw-2rem)] max-w-288.5"
                     : "w-full max-w-88 sm:max-w-120 md:max-w-166.25"
                     }`}

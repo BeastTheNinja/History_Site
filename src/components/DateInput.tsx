@@ -68,7 +68,7 @@ export const DateInput = ({
                     pattern={inputPattern}
                     value={value}
                     onChange={(e) => handleChange(e.target.value)}
-                    className={`w-32 sm:w-40 ${isFlow ? "md:w-48" : "md:w-full"} text-4xl sm:text-6xl md:text-8xl font-normal font-['Limelight'] underline text-[#1F1F1F] dark:text-[#C7BD8D] bg-transparent border-none focus:outline-none placeholder:text-[#695E48] dark:placeholder:text-[#C7BD8D]/70`}
+                    className={`w-32 sm:w-40 ${isFlow ? "md:w-90" : "md:w-full"} text-4xl sm:text-6xl md:text-8xl font-normal font-['Limelight'] underline text-[#1F1F1F] dark:text-[#C7BD8D] bg-transparent border-none focus:outline-none placeholder:text-[#695E48] dark:placeholder:text-[#C7BD8D]/70`}
                 />
             </div>
             <p className={descriptionClass}>
